@@ -1,0 +1,158 @@
+html{
+  scroll-behavior:smooth;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#020b25;
+  color:white;
+  padding:40px 60px;
+  overflow-x:hidden;
+}
+
+/* BACK BUTTON */
+.back-btn{
+  display:inline-flex;
+  gap:10px;
+  align-items:center;
+  color:#caa6ff;
+  text-decoration:none;
+  margin-bottom:30px;
+  transition:.3s;
+}
+
+.back-btn:hover{
+  transform:translateX(-5px);
+  text-shadow:0 0 15px #caa6ff;
+}
+
+/* GLOW */
+.blur{
+  position:absolute;
+  width:350px;
+  height:350px;
+  background:#8d3ebb ;
+  border-radius:50%;
+  filter:blur(120px);
+  z-index:-1;
+}
+
+.blur1{
+  top:100px;
+  left:-120px;
+}
+
+.blur2{
+  top:100px;
+  right:-120px;
+}
+
+/* HERO */
+.hero{
+  text-align:center;
+  margin-top:20px;
+}
+
+.title-btn{
+  padding:10px 25px;
+  border-radius:30px;
+  border:1px solid rgba(255,255,255,.2);
+  background:rgba(255,255,255,.05);
+  color:white;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.title-btn:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 20px #8d3ebb;
+}
+
+.hero h1{
+  font-size:65px;
+  margin-top:20px;
+  line-height:1.2;
+}
+
+.hero span{
+  background:linear-gradient(to right,#caa6ff,#8d3ebb);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* LINE */
+.line, .line2{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:15px;
+  margin-top:25px;
+}
+
+.line div,
+.line2 div{
+  width:80px;
+  height:2px;
+  background:#caa6ff;
+}
+
+.line i{
+  color:#8d3ebb;
+}
+
+/* CONTENT */
+.content{
+  margin-top:70px;
+  display:flex;
+  flex-direction:column;
+  gap:25px;
+}
+
+.card{
+  background:rgba(10,20,60,.6);
+  border:1px solid rgba(255,255,255,.08);
+  border-left:4px solid #8d3ebb;
+  padding:30px;
+  border-radius:18px;
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 0 25px rgba(168,107,255,.6);
+}
+
+/* FOOTER */
+.footer{
+  margin-top:60px;
+  text-align:center;
+  padding:60px;
+  background:linear-gradient(to right,#1c1240,#161a66);
+  border-radius:25px;
+}
+
+.footer h2{
+  font-size:55px;
+  background:linear-gradient(to right,#fff,#8d3ebb);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.quote{
+  width:70px;
+  height:70px;
+  margin:auto;
+  background:#caa6ff;
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  box-shadow:0 0 20px #8d3ebb;
+  margin-bottom:20px;
+}

@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aurora Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+    }
+
+    body{
+      background:#060018;
+      color:white;
+      overflow-x:hidden;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body::before{
+      content:'';
+      position:fixed;
+      width:600px;
+      height:600px;
+      background:#8d3ebb;
+      filter:blur(200px);
+      opacity:0.25;
+      top:-200px;
+      left:-150px;
+      z-index:-1;
+    }
+
+    body::after{
+      content:'';
+      position:fixed;
+      width:500px;
+      height:500px;
+      background:#8d3ebb;
+      filter:blur(200px);
+      opacity:0.2;
+      bottom:-200px;
+      right:-100px;
+      z-index:-1;
+    }
+
+    /* NAVBAR */
+
+    nav{
+      width:100%;
+      padding:22px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      border-bottom:1px solid rgba(255,255,255,0.1);
+      backdrop-filter:blur(10px);
+      position:sticky;
+      top:0;
+      z-index:100;
+      background:rgba(0,0,0,0.2);
+    }
+
+    .logo{
+      font-size:38px;
+      font-weight:700;
+      color:#c774ff;
+      text-shadow:0 0 15px #8d3ebb;
+    }
+
+    nav ul{
+      display:flex;
+      gap:40px;
+      list-style:none;
+    }
+
+    nav ul li a{
+      color:white;
+      text-decoration:none;
+      font-size:18px;
+      transition:0.3s;
+      position:relative;
+    }
+
+    nav ul li a:hover{
+      color:#c774ff;
+    }
+
+    nav ul li a::after{
+      content:'';
+      position:absolute;
+      left:0;
+      bottom:-8px;
+      width:0%;
+      height:2px;
+      background:#c774ff;
+      transition:0.3s;
+    }
+
+    nav ul li a:hover::after{
+      width:100%;
+    }
+
+    /* HERO */
+
+    .hero{
+      text-align:center;
+      padding:80px 20px 40px;
+    }
+
+    .hero .icon{
+      width:90px;
+      height:90px;
+      border:3px solid #8d3ebb;
+      border-radius:50%;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      margin:auto;
+      box-shadow:0 0 25px #8d3ebb;
+      font-size:40px;
+      color:#c774ff;
+    }
+
+    .hero h2{
+      margin-top:25px;
+      font-size:40px;
+      font-weight:300;
+    }
+
+    .hero h1{
+      font-size:85px;
+      color:#c774ff;
+      text-shadow:0 0 25px #8d3ebb;
+    }
+
+    .hero p{
+      letter-spacing:6px;
+      margin-top:10px;
+      color:#ddd;
+    }
+
+    /* CONTAINER */
+
+    .container{
+      width:90%;
+      max-width:1250px;
+      margin:40px auto 80px;
+      border:2px solid #8d3ebb;
+      border-radius:35px;
+      padding:45px;
+      background:rgba(255,255,255,0.03);
+      backdrop-filter:blur(10px);
+      box-shadow:0 0 35px rgba(141,62,187,0.5);
+    }
+
+    .content{
+      display:grid;
+      grid-template-columns:350px 1fr;
+      gap:50px;
+    }
+
+    /* IMAGE */
+
+    .image-box{
+      position:relative;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+
+    .image-frame{
+      width:280px;
+      height:430px;
+      border-radius:180px;
+      border:3px solid #c774ff;
+      padding:12px;
+      box-shadow:0 0 30px #8d3ebb;
+      overflow:hidden;
+      background:rgba(255,255,255,0.05);
+    }
+
+    .image-frame img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      border-radius:180px;
+    }
+
+    /* INFO */
+
+    .info h2{
+      font-size:50px;
+      color:#ffffff;
+      margin-bottom:10px;
+    }
+
+    .info h3{
+      color:#8d3ebb;
+      font-size:24px;
+      margin-bottom:25px;
+    }
+
+    .quote{
+      font-style:italic;
+      color:#d8b7ff;
+      margin-bottom:30px;
+      font-size:18px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:25px;
+      margin-top:30px;
+    }
+
+    .card{
+      background:rgba(255,255,255,0.04);
+      border:1px solid rgba(255,255,255,0.1);
+      padding:22px;
+      border-radius:20px;
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+      box-shadow:0 0 20px rgba(141,62,187,0.7);
+      border-color:#8d3ebb;
+    }
+
+    .card span{
+      display:block;
+      color:#8d3ebb;
+      margin-bottom:10px;
+      font-weight:600;
+      font-size:17px;
+    }
+
+    .about{
+      margin-top:40px;
+      padding-top:30px;
+      border-top:1px solid rgba(255,255,255,0.1);
+    }
+
+    .about h3{
+      margin-bottom:15px;
+      color:#8d3ebb;
+      font-size:28px;
+    }
+
+    .about p{
+      line-height:1.8;
+      color:#ddd;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:950px){
+
+      .content{
+        grid-template-columns:1fr;
+      }
+
+      .image-box{
+        margin-bottom:20px;
+      }
+
+      .grid{
+        grid-template-columns:1fr;
+      }
+
+      .hero h1{
+        font-size:60px;
+      }
+
+      nav{
+        flex-direction:column;
+        gap:20px;
+      }
+
+      nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+      }
+
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+
+  <nav>
+
+    <div class="logo">Aurora Portfolio</div>
+
+    <ul>
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="index.html#About Us">About Us</a></li>
+      <li><a href="index.html#Skills">Skills</a></li>
+      <li><a href="index.html#Project">Projects</a></li>
+      <li><a href="index.html#Contact">Contact</a></li>
+    </ul>
+
+  </nav>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="icon">👤</div>
+
+    <h2>Hello, I'm</h2>
+
+    <h1>AURORA</h1>
+
+    <p>DREAM • LEARN • CREATE • INSPIRE</p>
+
+  </section>
+
+  <!-- PROFILE -->
+
+  <section class="container">
+
+    <div class="content">
+
+      <!-- IMAGE -->
+
+      <div class="image-box">
+
+        <div class="image-frame">
+          <img src="img/foto_formal-removebg-preview (1).png" alt="">
+        </div>
+
+      </div>
+
+      <!-- INFO -->
+
+      <div class="info">
+
+        <h2>Aurora Silviana Putri</h2>
+
+        <h3>Software Engineering Student</h3>
+
+        <div class="quote">
+          "Keep learning, growing, and never stop creating."
+        </div>
+
+        <div class="grid">
+
+          <div class="card">
+            <span>Full Name</span>
+            Aurora Silviana Putri
+          </div>
+
+          <div class="card">
+            <span>Date of Birth</span>
+            3 November 2009
+          </div>
+
+          <div class="card">
+            <span>Age</span>
+            16 Years Old
+          </div>
+
+          <div class="card">
+            <span>Birthplace</span>
+            Semarang Regency
+          </div>
+
+          <div class="card">
+            <span>Address</span>
+            Dusun Rekesan, Desa Bejilor, Kec. Suruh
+          </div>
+
+          <div class="card">
+            <span>Phone</span>
+            0831-6252-8821
+          </div>
+
+          <div class="card">
+            <span>Email</span>
+            aurora03@gmail.com
+          </div>
+
+          <div class="card">
+            <span>Major</span>
+            Software Engineering (PPLG)
+          </div>
+
+        </div>
+
+        <!-- ABOUT -->
+
+        <div class="about">
+
+          <h3>About Me</h3>
+
+          <p>
+            I am a vocational high school student majoring in Software Engineering. 
+            I have an interest in web development, UI design, and technology. 
+            I enjoy learning new things, creating modern website designs, and improving my coding skills little by little.
+          </p>
+
+        </div>
+
+        <!-- EDUCATION -->
+
+        <div class="about">
+
+          <h3>Education History</h3>
+
+          <p>
+            <b>TK Pertiwi Kebowan</b> (2015 - 2016)<br><br>
+
+            <b>SDN Bejilor 01</b> (2017 - 2022)<br><br>
+
+            <b>SMPN 2 Tengaran</b> (2023 - 2025)<br><br>
+
+            <b>SMKN Tengaran</b> (2025 - Present)<br>
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</body>
+</html>
