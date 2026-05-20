@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,29 +17,29 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- ICON -->
-  <link rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
   <script>
-const hiddenElements = document.querySelectorAll('.hidden');
+    const hiddenElements = document.querySelectorAll('.hidden');
 
-window.addEventListener('scroll', function () {
+    window.addEventListener('scroll', function () {
 
-  hiddenElements.forEach(function(el){
+      hiddenElements.forEach(function (el) {
 
-    const rect = el.getBoundingClientRect();
+        const rect = el.getBoundingClientRect();
 
-    if(rect.top < window.innerHeight - 100){
-      el.classList.add('show');
-    }
+        if (rect.top < window.innerHeight - 100) {
+          el.classList.add('show');
+        }
 
-  });
+      });
 
-});
-</script>
+    });
+  </script>
 
 </head>
+
 <body>
 
   <!-- GLOW -->
@@ -85,23 +86,22 @@ window.addEventListener('scroll', function () {
           Eksplor
         </a>
         <a href="profil.html">
-        <button class="main-btn">
-          Profil
-          <i class="fa-solid fa-user"></i>
-        </button>
+          <button class="main-btn">
+            Profil
+            <i class="fa-solid fa-user"></i>
+          </button>
         </a>
 
       </div>
 
     </div>
 
-    <div class="hero-right">
-      <h2>A Creative Developer</h2>
-      <span>& Designer</span>
-    </div>
+    <h3 class="typing-text">
+        A Creative <span id="changing-text"></span>
+      </h3>
 
   </section>
-  
+
 
   <!-- ABOUT -->
   <section class="about" id="about">
@@ -125,9 +125,11 @@ window.addEventListener('scroll', function () {
         I am always eager to grow in both development and design.
       </p>
 
+      
+
     </div>
 
-    
+
 
   </section>
 
@@ -145,13 +147,13 @@ window.addEventListener('scroll', function () {
         <div class="progress-wrapper">
           <span class="percent">80%</span>
         </div>
-        
+
 
         <div class="bar">
           <div class="progress" style="width:80%"></div>
         </div>
 
-        
+
       </div>
 
       <div class="skill-card">
@@ -166,7 +168,7 @@ window.addEventListener('scroll', function () {
           <div class="progress" style="width:60%"></div>
         </div>
 
-        
+
       </div>
 
       <div class="skill-card">
@@ -181,7 +183,7 @@ window.addEventListener('scroll', function () {
           <div class="progress" style="width:50%"></div>
         </div>
 
-        
+
       </div>
 
       <div class="skill-card">
@@ -196,7 +198,7 @@ window.addEventListener('scroll', function () {
           <div class="progress" style="width:30%"></div>
         </div>
 
-        
+
       </div>
 
       <div class="skill-card">
@@ -211,7 +213,7 @@ window.addEventListener('scroll', function () {
           <div class="progress" style="width:40%"></div>
         </div>
 
-        
+
       </div>
 
     </div>
@@ -254,7 +256,8 @@ window.addEventListener('scroll', function () {
           <p>School Website.</p>
           <br>
 
-          <a href="https://aurorasilviana.github.io/website-smk-digital/"><button class="main-btn">Read More</button></a>
+          <a href="https://aurorasilviana.github.io/website-smk-digital/"><button class="main-btn">Read
+              More</button></a>
         </div>
 
         <div class="project-card">
@@ -301,72 +304,72 @@ window.addEventListener('scroll', function () {
   </section>
 
   <!-- CONTACT -->
-<section class="contact" id="contact">
+  <section class="contact" id="contact">
 
-  <h2>Contact Me</h2>
+    <h2>Contact Me</h2>
 
-  <p class="contact-sub">
-    Tell me about your next project
-  </p>
+    <p class="contact-sub">
+      Tell me about your next project
+    </p>
 
-  <div class="contact-container">
+    <div class="contact-container">
 
-    <!-- KIRI -->
-    <div class="contact-left">
+      <!-- KIRI -->
+      <div class="contact-left">
 
-      <div class="contact-item">
+        <div class="contact-item">
 
-        <i class="fa-regular fa-envelope"></i>
+          <i class="fa-regular fa-envelope"></i>
 
-        <div>
-          <h4>Email</h4>
-          <span>aurora@gmail.com</span>
+          <div>
+            <h4>Email</h4>
+            <span>aurora@gmail.com</span>
+          </div>
+
+        </div>
+
+        <div class="contact-item">
+
+          <i class="fa-solid fa-phone"></i>
+
+          <div>
+            <h4>Phone</h4>
+            <span>+62 812345678</span>
+          </div>
+
+        </div>
+
+        <div class="contact-item">
+
+          <i class="fa-solid fa-location-dot"></i>
+
+          <div>
+            <h4>Address</h4>
+            <span>Indonesia</span>
+          </div>
+
         </div>
 
       </div>
 
-      <div class="contact-item">
+      <!-- KANAN -->
+      <form class="contact-form">
 
-        <i class="fa-solid fa-phone"></i>
+        <input type="text" placeholder="Names">
 
-        <div>
-          <h4>Phone</h4>
-          <span>+62 812345678</span>
-        </div>
+        <input type="email" placeholder="Email">
 
-      </div>
+        <textarea placeholder="Message"></textarea>
 
-      <div class="contact-item">
+        <button type="submit" class="main-btn">
+          Send Message
+        </button>
 
-        <i class="fa-solid fa-location-dot"></i>
-
-        <div>
-          <h4>Address</h4>
-          <span>Indonesia</span>
-        </div>
-
-      </div>
+      </form>
 
     </div>
 
-    <!-- KANAN -->
-    <form class="contact-form">
-
-      <input type="text" placeholder="Names">
-
-      <input type="email" placeholder="Email">
-
-      <textarea placeholder="Message"></textarea>
-
-      <button type="submit" class="main-btn">
-        Send Message
-      </button>
-
-    </form>
-
-  </div>
-
-</section>
+  </section>
   </section>
 
   <!-- FOOTER -->
@@ -399,7 +402,8 @@ window.addEventListener('scroll', function () {
 
         <a href="https://www.tiktok.com/@auroraaa03?_r=1&_t=ZS-96NQyzYFoLl"><i class="fa-brands fa-tiktok"></i></a>
 
-        <a href="https://www.instagram.com/auroslvv_?igsh=MXJmazQwOXNmZDRsbg%3D%3D&utm_source=qr"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.instagram.com/auroslvv_?igsh=MXJmazQwOXNmZDRsbg%3D%3D&utm_source=qr"><i
+            class="fa-brands fa-instagram"></i></a>
 
       </div>
 
@@ -411,20 +415,21 @@ window.addEventListener('scroll', function () {
   <script src="script.js"></script>
 
   <script>
-const navbar = document.querySelector(".navbar");
+    const navbar = document.querySelector(".navbar");
 
-window.addEventListener("scroll", () => {
+    window.addEventListener("scroll", () => {
 
-  if(window.scrollY > 50){
-    navbar.classList.add("scrolled");
-  } 
-  
-  else{
-    navbar.classList.remove("scrolled");
-  }
+      if (window.scrollY > 50) {
+        navbar.classList.add("scrolled");
+      }
 
-});
-</script>
+      else {
+        navbar.classList.remove("scrolled");
+      }
+
+    });
+  </script>
 
 </body>
+
 </html>
