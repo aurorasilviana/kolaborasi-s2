@@ -184,6 +184,25 @@ header{
   
 }
 
+.typing-text{
+  font-size:40px;
+  font-weight:bold;
+  color:#b14cff;
+  margin-left: 120px;
+}
+
+#changing-text{
+  border-right:4px solid white;
+  padding-right:5px;
+  animation:blink .7s infinite;
+}
+
+@keyframes blink{
+  50%{
+    border-color:transparent;
+  }
+}
+
 
 /* FOTO */
 .circle,
