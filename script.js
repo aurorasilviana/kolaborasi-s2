@@ -47,3 +47,54 @@ form.addEventListener("submit", (e) => {
 
 });
 
+const words = ["Developer", "Designer", "Freelancer", "Creator"];
+
+let wordIndex = 0;
+let letterIndex = 0;
+let currentWord = "";
+let currentLetters = "";
+
+const changingText = document.getElementById("changing-text");
+
+function typeEffect(){
+
+  if(letterIndex < words[wordIndex].length){
+
+    currentLetters += words[wordIndex][letterIndex];
+    changingText.textContent = currentLetters;
+
+    letterIndex++;
+
+    setTimeout(typeEffect, 120);
+
+  }else{
+
+    setTimeout(deleteEffect, 1500);
+
+  }
+}
+
+function deleteEffect(){
+
+  if(letterIndex > 0){
+
+    currentLetters = currentLetters.slice(0, -1);
+    changingText.textContent = currentLetters;
+
+    letterIndex--;
+
+    setTimeout(deleteEffect, 80);
+
+  }else{
+
+    wordIndex++;
+
+    if(wordIndex >= words.length){
+      wordIndex = 0;
+    }
+
+    setTimeout(typeEffect, 300);
+  }
+}
+
+typeEffect();
